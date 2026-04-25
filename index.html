@@ -19,93 +19,98 @@ body{
     background:#f7f4ef;
     color:#333;
 }
+
 .container{
     max-width:720px;
     margin:0 auto;
     padding:20px;
 }
+
 .card{
     background:#fff;
     border-radius:18px;
     box-shadow:0 8px 30px rgba(0,0,0,0.08);
     padding:24px;
 }
+
 .hero img{
     width:100%;
     border-radius:16px;
 }
+
 h1{
     text-align:center;
     font-weight:500;
     margin:20px 0 8px;
 }
+
 .info{
     text-align:center;
     line-height:1.8;
-    white-space:pre-line;
+    font-size:15px;
 }
-.map{
+
+.message{
     margin-top:20px;
+    line-height:1.8;
+    font-size:15px;
+    white-space:pre-line;
     text-align:center;
 }
-.map a{
-    display:block;
-    text-decoration:none;
-    color:#333;
-    border-radius:12px;
-    overflow:hidden;
-    box-shadow:0 6px 18px rgba(0,0,0,0.12);
-}
+
 .map img{
     width:100%;
-    display:block;
+    border-radius:12px;
+    margin-top:20px;
 }
-.map div{
-    padding:12px;
-    background:#fff;
-    font-size:14px;
-}
+
 .footer{
     text-align:center;
     margin-top:20px;
-    color:#888;
     font-size:13px;
+    color:#888;
 }
 </style>
 </head>
 
 <body>
+
 <div class="container">
   <div class="card">
 
-    <!-- 照片（直接本地文件，不需要 https） -->
+    <!-- 照片 -->
     <div class="hero">
       <img src="20260415-211014.jpg" />
     </div>
 
+    <!-- 标题 -->
     <h1>周少辰 ❤ 吴玥婚礼请柬</h1>
 
+    <!-- 信息 -->
+    <div class="info">
+时间：2026年5月30日 12:00<br/>
+地点：太原兰博泰尔酒店
+    </div>
+
+    <!-- 文案（完全不改你的内容，只做换行优化） -->
     <div class="message">
-嘉礼将成，良期已定。
-两姓既合，百年有约。
-不言山盟，天地自证；
-未书海誓，岁月为凭。
+嘉礼将成，良期已定。<br/>
+两姓既合，百年有约。<br/>
+不言山盟，天地自证；<br/>
+未书海誓，岁月为凭。<br/><br/>
 
-谨以是日，行婚姻之仪。
-不事喧阗，不尚繁华，
-唯愿与至亲至友，共见此刻。
+谨以是日，行婚姻之仪。<br/>
+不事喧阗，不尚繁华，<br/>
+唯愿与至亲至友，共见此刻。<br/><br/>
 
-吉日
-公元二〇二六年五月三十日
+吉日<br/>
+公元二〇二六年五月三十日<br/>
 静候君至。
     </div>
 
-    <!-- 地图（微信可识别腾讯地图跳转卡片） -->
+    <!-- 地图（只做展示，不依赖腾讯API） -->
     <div class="map">
-      <a href="https://apis.map.qq.com/uri/v1/marker?marker=coord:37.8706,112.5489;title:兰博泰尔酒店;addr:山西省太原市杏花岭区府西街103号&referer=myapp">
-        <img src="https://apis.map.qq.com/ws/staticmap/v2/?center=37.8706,112.5489&zoom=16&size=600*300&markers=size:large|color:red|37.8706,112.5489">
-        <div>📍 点击查看地图 · 可导航到兰博泰尔酒店</div>
-      </a>
+      <img src="https://apis.map.qq.com/ws/staticmap/v2/?center=37.8706,112.5489&zoom=15&size=600*300&markers=size:large|color:red|37.8706,112.5489">
     </div>
 
     <div class="footer">
@@ -114,5 +119,6 @@ h1{
 
   </div>
 </div>
+
 </body>
 </html>
