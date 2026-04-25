@@ -4,36 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- 微信分享卡片 -->
+  <!-- 微信/社交分享卡片 -->
   <meta property="og:title" content="周少辰 ❤ 吴玥婚礼请柬" />
   <meta property="og:description" content="嘉礼将成，良期已定。两姓既合，百年有约。谨以是日，行婚姻之仪。静候君至。" />
-  <meta property="og:image" content="20260415-211014.jpg" />
+  <meta property="og:image" content="https://jockysimply.github.io/wedding-invite/20260415-211014.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:type" content="website" />
 
   <title>周少辰 ❤ 吴玥婚礼请柬</title>
 
   <style>
-    :root {
-      --bg: #f7f4ef;
-      --card: #ffffff;
-      --text: #333333;
-      --sub: #666666;
-      --muted: #999999;
-      --line: #f0ece5;
-      --main: #b88a5a;
-      --main-dark: #a0764c;
-      --shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: #f7f4ef;
+      color: #333;
     }
 
     .container {
@@ -43,11 +29,10 @@
     }
 
     .card {
-      background: var(--card);
+      background: #fff;
       border-radius: 18px;
-      box-shadow: var(--shadow);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
       padding: 24px;
-      overflow: hidden;
     }
 
     .hero img {
@@ -60,118 +45,50 @@
       text-align: center;
       font-weight: 500;
       margin: 20px 0 8px;
-      letter-spacing: 0.5px;
     }
 
     .info {
       text-align: center;
       line-height: 1.8;
       font-size: 15px;
-      color: var(--sub);
+      color: #555;
     }
 
     .message {
       margin-top: 20px;
-      line-height: 1.9;
+      line-height: 1.8;
       font-size: 15px;
       white-space: pre-line;
       text-align: center;
-      color: #444;
     }
 
-    /* 位置卡片（替代底部静态地图） */
-    .location-card {
+    .map-title {
       margin-top: 24px;
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 14px;
-      background: #fffdfa;
-    }
-
-    .location-top {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-    }
-
-    .pin {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      background: #fef2e7;
-      color: var(--main);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      flex-shrink: 0;
-    }
-
-    .location-text {
-      min-width: 0;
-      flex: 1;
-    }
-
-    .location-title {
+      margin-bottom: 10px;
+      text-align: center;
       font-size: 16px;
-      font-weight: 600;
-      color: #2f2f2f;
-      line-height: 1.4;
-      margin: 0 0 2px;
+      color: #555;
+      letter-spacing: 1px;
     }
 
-    .location-address {
-      margin: 0;
-      font-size: 13px;
-      color: var(--muted);
-      line-height: 1.6;
-    }
-
-    .location-actions {
-      margin-top: 12px;
-      display: flex;
-      gap: 10px;
-    }
-
-    .btn {
-      appearance: none;
-      border: none;
-      border-radius: 10px;
-      height: 40px;
-      padding: 0 14px;
-      cursor: pointer;
-      font-size: 14px;
-      line-height: 40px;
+    .map a {
+      display: block;
+      border-radius: 12px;
+      overflow: hidden;
       text-decoration: none;
-      text-align: center;
-      flex: 1;
-      transition: transform .06s ease, opacity .2s ease, background .2s ease;
-      user-select: none;
     }
 
-    .btn:active {
-      transform: translateY(1px);
+    .map img {
+      width: 100%;
+      display: block;
+      border-radius: 12px;
     }
 
-    .btn-main {
-      background: var(--main);
-      color: #fff;
-    }
-
-    .btn-main:hover {
-      background: var(--main-dark);
-    }
-
-    .btn-ghost {
-      background: #f6f1ea;
-      color: #7c5a37;
-    }
-
-    .tips {
+    .map-tip {
       margin-top: 8px;
-      font-size: 12px;
-      color: #a28f7a;
       text-align: center;
+      font-size: 12px;
+      color: #999;
     }
 
     .footer {
@@ -179,31 +96,14 @@
       margin-top: 20px;
       font-size: 13px;
       color: #888;
-      letter-spacing: 0.2px;
-    }
-
-    @media (max-width: 480px) {
-      .card {
-        padding: 18px;
-      }
-
-      h1 {
-        font-size: 24px;
-      }
-
-      .location-actions {
-        flex-direction: column;
-      }
-
-      .btn {
-        flex: unset;
-      }
     }
   </style>
 </head>
+
 <body>
   <div class="container">
     <div class="card">
+
       <!-- 照片 -->
       <div class="hero">
         <img src="20260415-211014.jpg" alt="婚礼照片" />
@@ -234,64 +134,27 @@
 静候君至。
       </div>
 
-      <!-- 位置卡片 -->
-      <div class="location-card">
-        <div class="location-top">
-          <div class="pin">📍</div>
-          <div class="location-text">
-            <p class="location-title">太原兰博泰尔酒店</p>
-            <p class="location-address">山西省太原市（可点击下方按钮一键导航）</p>
-          </div>
-        </div>
-
-        <div class="location-actions">
-          <!-- 腾讯地图 URI：微信内通常可直接打开地图导航 -->
-          <a
-            id="openMapBtn"
-            class="btn btn-main"
-            href="https://apis.map.qq.com/uri/v1/marker?marker=coord:37.8706,112.5489;title:%E5%A4%AA%E5%8E%9F%E5%85%B0%E5%8D%9A%E6%B3%B0%E5%B0%94%E9%85%92%E5%BA%97;addr:%E5%B1%B1%E8%A5%BF%E7%9C%81%E5%A4%AA%E5%8E%9F%E5%B8%82&referer=mywedding"
-            target="_blank"
-            rel="noopener"
-          >
-            打开地图导航
-          </a>
-
-          <!-- 备用：直接跳腾讯静态点位页面 -->
-          <a
-            class="btn btn-ghost"
-            href="https://map.qq.com/?type=marker&isopeninfowin=1&markertype=1&marker=coord:37.8706,112.5489;title:%E5%A4%AA%E5%8E%9F%E5%85%B0%E5%8D%9A%E6%B3%B0%E5%B0%94%E9%85%92%E5%BA%97;addr:%E5%B1%B1%E8%A5%BF%E7%9C%81%E5%A4%AA%E5%8E%9F%E5%B8%82"
-            target="_blank"
-            rel="noopener"
-          >
-            查看位置详情
-          </a>
-        </div>
-
-        <div class="tips" id="mapTips">
-          在微信内打开可获得更接近原生的地图唤起体验
-        </div>
+      <!-- 地图（显示静态图，点击打开腾讯地图） -->
+      <div class="map-title">婚礼地点</div>
+      <div class="map">
+        <a
+          href="https://apis.map.qq.com/uri/v1/marker?marker=coord:37.87812,112.5635;title:%E5%85%B0%E5%8D%9A%E6%B3%B0%E5%B0%94%E9%85%92%E5%BA%97;addr:%E5%B1%B1%E8%A5%BF%E7%9C%81%E5%A4%AA%E5%8E%9F%E5%B8%82%E6%9D%8F%E8%8A%B1%E5%B2%AD%E5%8C%BA%E5%BA%9C%E8%A5%BF%E8%A1%97103%E5%8F%B7&referer=myapp"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="https://apis.map.qq.com/ws/staticmap/v2/?center=37.87812,112.5635&zoom=16&size=640*320&markers=size:large|color:red|37.87812,112.5635"
+            alt="婚礼地点地图"
+          />
+        </a>
       </div>
+      <div class="map-tip">点击地图可打开导航</div>
 
       <div class="footer">
-        敬备喜筵 · 恭候光临
+        敬备喜筵 恭候光临
       </div>
+
     </div>
   </div>
-
-  <script>
-    (function () {
-      var ua = navigator.userAgent.toLowerCase();
-      var isWeChat = ua.indexOf("micromessenger") !== -1;
-      var tips = document.getElementById("mapTips");
-      var btn = document.getElementById("openMapBtn");
-
-      if (isWeChat) {
-        tips.textContent = "已识别微信环境，可直接点击“打开地图导航”";
-        btn.textContent = "微信内打开地图";
-      } else {
-        tips.textContent = "建议在微信中打开请柬，导航体验更好";
-      }
-    })();
-  </script>
 </body>
 </html>
