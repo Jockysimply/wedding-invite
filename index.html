@@ -1,171 +1,120 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- 分享卡片 -->
-  <meta property="og:title" content="周少辰 ❤ 吴玥婚礼请柬" />
-  <meta property="og:description" content="嘉礼将成，良期已定。两姓既合，百年有约。谨以是日，行婚姻之仪。静候君至。" />
-  <meta property="og:image" content="https://jockysimply.github.io/wedding-invite/20260415-211014.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:type" content="website" />
+<!-- WeChat Share Card (Open Graph) -->
+<meta property="og:title" content="周少辰 ❤ 吴玥婚礼请柬" />
+<meta property="og:description" content="嘉礼将成，良期已定。两姓既合，百年有约。谨以是日，行婚姻之仪。静候君至。" />
+<meta property="og:image" content="https://jockysimply.github.io/wedding-invite/20260415-211014.jpg" />
+<meta property="og:type" content="website" />
 
-  <title>周少辰 ❤ 吴玥婚礼请柬</title>
+<title>周少辰 ❤ 吴玥婚礼请柬</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
-      background: #f7f4ef;
-      color: #333;
+<style>
+body{
+    margin:0;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background:#f7f4ef;
+    color:#333;
+}
+.container{
+    max-width:720px;
+    margin:0 auto;
+    padding:20px;
+}
+.card{
+    background:white;
+    border-radius:18px;
+    box-shadow:0 8px 30px rgba(0,0,0,0.08);
+    padding:24px;
+}
+.hero img{
+    width:100%;
+    border-radius:16px;
+}
+h1{
+    text-align:center;
+    font-weight:500;
+    margin:24px 0 8px;
+}
+.names, .time, .venue{
+    text-align:center;
+    margin:6px 0;
+    font-size:16px;
+}
+.message{
+    margin:24px 0;
+    line-height:1.9;
+    white-space:pre-line;
+    text-align:center;
+}
+.map-title{
+    text-align:center;
+    margin:24px 0 12px;
+    font-size:18px;
+}
+.map iframe{
+    width:100%;
+    height:280px;
+    border:0;
+    border-radius:12px;
+}
+
+/* 新增：地图下方双按钮 */
+.map-actions{
+    margin-top:12px;
+    display:flex;
+    gap:10px;
+}
+.map-btn{
+    flex:1;
+    display:inline-block;
+    text-align:center;
+    text-decoration:none;
+    color:#fff;
+    border-radius:10px;
+    height:40px;
+    line-height:40px;
+    font-size:14px;
+}
+.map-btn.tencent{
+    background:#12b7f5;
+}
+.map-btn.amap{
+    background:#00b578;
+}
+
+.footer{
+    text-align:center;
+    margin-top:18px;
+    font-size:14px;
+    color:#888;
+}
+
+@media (max-width:520px){
+    .map-actions{
+        flex-direction:column;
     }
-
-    .container {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    .card {
-      background: #fff;
-      border-radius: 18px;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-      padding: 24px;
-    }
-
-    .hero img {
-      width: 100%;
-      border-radius: 16px;
-      display: block;
-    }
-
-    h1 {
-      text-align: center;
-      font-weight: 500;
-      margin: 20px 0 8px;
-    }
-
-    .info {
-      text-align: center;
-      line-height: 1.8;
-      font-size: 15px;
-      color: #555;
-    }
-
-    .message {
-      margin-top: 20px;
-      line-height: 1.8;
-      font-size: 15px;
-      white-space: pre-line;
-      text-align: center;
-      color: #444;
-    }
-
-    .map-title {
-      margin-top: 24px;
-      margin-bottom: 12px;
-      text-align: center;
-      font-size: 16px;
-      color: #555;
-      letter-spacing: 1px;
-    }
-
-    .location-card {
-      border: 1px solid #f0ece5;
-      border-radius: 14px;
-      background: #fffdfa;
-      overflow: hidden;
-    }
-
-    .map-preview-link {
-      display: block;
-      text-decoration: none;
-    }
-
-    .map-preview {
-      width: 100%;
-      display: block;
-      background: #f2f2f2;
-    }
-
-    .location-info {
-      padding: 12px 14px 6px;
-      text-align: center;
-    }
-
-    .location-name {
-      font-size: 17px;
-      color: #2f2f2f;
-      font-weight: 600;
-      line-height: 1.4;
-    }
-
-    .location-addr {
-      margin-top: 6px;
-      font-size: 13px;
-      color: #888;
-      line-height: 1.6;
-    }
-
-    .actions {
-      margin-top: 10px;
-      padding: 0 14px 14px;
-      display: flex;
-      gap: 10px;
-    }
-
-    .btn {
-      flex: 1;
-      display: inline-block;
-      text-decoration: none;
-      text-align: center;
-      border-radius: 10px;
-      height: 40px;
-      line-height: 40px;
-      font-size: 14px;
-      color: #fff;
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    .btn-tx { background: #12b7f5; }
-    .btn-gd { background: #00b578; }
-
-    .footer {
-      text-align: center;
-      margin-top: 20px;
-      font-size: 13px;
-      color: #888;
-    }
-
-    @media (max-width: 520px) {
-      .card { padding: 18px; }
-      .actions { flex-direction: column; }
-    }
-  </style>
+}
+</style>
 </head>
 
 <body>
-  <div class="container">
-    <div class="card">
+<div class="container">
+  <div class="card">
 
-      <!-- 照片 -->
-      <div class="hero">
-        <img src="20260415-211014.jpg" alt="婚礼照片" />
-      </div>
+    <div class="hero">
+      <img src="20260415-211014.jpg" alt="Wedding Photo" />
+    </div>
 
-      <!-- 标题 -->
-      <h1>周少辰 ❤ 吴玥婚礼请柬</h1>
+    <h1>周少辰 ❤ 吴玥婚礼请柬</h1>
+    <div class="names">周少辰，吴玥</div>
+    <div class="time">2026年5月30日 12:00</div>
+    <div class="venue">太原兰博泰尔酒店</div>
 
-      <!-- 信息 -->
-      <div class="info">
-        时间：2026年5月30日 12:00<br />
-        地点：太原兰博泰尔酒店
-      </div>
-
-      <!-- 文案 -->
-      <div class="message">
+    <div class="message">
 嘉礼将成，良期已定。
 两姓既合，百年有约。
 不言山盟，天地自证；
@@ -178,52 +127,36 @@
 吉日
 公元二〇二六年五月三十日
 静候君至。
-      </div>
-
-      <!-- 婚礼地点：默认腾讯地图预览 + 腾讯/高德导航 -->
-      <div class="map-title">婚礼地点</div>
-      <div class="location-card">
-        <a
-          class="map-preview-link"
-          href="https://apis.map.qq.com/uri/v1/marker?marker=coord:37.87812,112.5635;title:%E5%85%B0%E5%8D%9A%E6%B3%B0%E5%B0%94%E9%85%92%E5%BA%97;addr:%E5%B1%B1%E8%A5%BF%E7%9C%81%E5%A4%AA%E5%8E%9F%E5%B8%82%E6%9D%8F%E8%8A%B1%E5%B2%AD%E5%8C%BA%E5%BA%9C%E8%A5%BF%E8%A1%97103%E5%8F%B7&referer=myapp"
-          target="_blank"
-          rel="noopener"
-          aria-label="打开腾讯地图"
-        >
-          <img
-            class="map-preview"
-            src="https://apis.map.qq.com/ws/staticmap/v2/?center=37.87812,112.5635&zoom=16&size=720*360&scale=2&markers=size:large|color:red|37.87812,112.5635"
-            alt="太原兰博泰尔酒店地图预览"
-          />
-        </a>
-
-        <div class="location-info">
-          <div class="location-name">太原兰博泰尔酒店</div>
-          <div class="location-addr">山西省太原市杏花岭区府西街103号</div>
-        </div>
-
-        <div class="actions">
-          <a
-            class="btn btn-tx"
-            href="https://apis.map.qq.com/uri/v1/marker?marker=coord:37.87812,112.5635;title:%E5%85%B0%E5%8D%9A%E6%B3%B0%E5%B0%94%E9%85%92%E5%BA%97;addr:%E5%B1%B1%E8%A5%BF%E7%9C%81%E5%A4%AA%E5%8E%9F%E5%B8%82%E6%9D%8F%E8%8A%B1%E5%B2%AD%E5%8C%BA%E5%BA%9C%E8%A5%BF%E8%A1%97103%E5%8F%B7&referer=myapp"
-            target="_blank"
-            rel="noopener"
-          >腾讯地图导航</a>
-
-          <a
-            class="btn btn-gd"
-            href="https://uri.amap.com/marker?position=112.5635,37.87812&name=%E5%85%B0%E5%8D%9A%E6%B3%B0%E5%B0%94%E9%85%92%E5%BA%97&src=weddinginvite&coordinate=gaode"
-            target="_blank"
-            rel="noopener"
-          >Alternative: 高德导航</a>
-        </div>
-      </div>
-
-      <div class="footer">
-        敬备喜筵 恭候光临
-      </div>
-
     </div>
+
+    <div class="map-title">婚礼地点</div>
+    <div class="map">
+      <iframe
+        src="https://apis.map.qq.com/uri/v1/marker?marker=coord:37.87812,112.5635;title:兰博泰尔酒店;addr:山西省太原市杏花岭区府西街103号&referer=myapp">
+      </iframe>
+    </div>
+
+    <div class="map-actions">
+      <a
+        class="map-btn tencent"
+        href="https://apis.map.qq.com/uri/v1/marker?marker=coord:37.87812,112.5635;title:%E5%85%B0%E5%8D%9A%E6%B3%B0%E5%B0%94%E9%85%92%E5%BA%97;addr:%E5%B1%B1%E8%A5%BF%E7%9C%81%E5%A4%AA%E5%8E%9F%E5%B8%82%E6%9D%8F%E8%8A%B1%E5%B2%AD%E5%8C%BA%E5%BA%9C%E8%A5%BF%E8%A1%97103%E5%8F%B7&referer=myapp"
+        target="_blank"
+        rel="noopener"
+      >腾讯地图导航</a>
+
+      <a
+        class="map-btn amap"
+        href="https://uri.amap.com/marker?position=112.5635,37.87812&name=%E5%85%B0%E5%8D%9A%E6%B3%B0%E5%B0%94%E9%85%92%E5%BA%97&src=weddinginvite&coordinate=gaode"
+        target="_blank"
+        rel="noopener"
+      >高德地图导航</a>
+    </div>
+
+    <div class="footer">
+      敬备喜筵 恭候光临
+    </div>
+
   </div>
+</div>
 </body>
 </html>
