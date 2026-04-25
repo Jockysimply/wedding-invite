@@ -1,91 +1,74 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-<!-- WeChat Share Card -->
-<meta property="og:title" content="周少辰 ❤ 吴玥婚礼请柬" />
-<meta property="og:description" content="嘉礼将成，良期已定。谨以是日，行婚姻之仪。静候君至。" />
-<meta property="og:image" content="OG_IMAGE_URL" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:type" content="website" />
 
 <title>周少辰 ❤ 吴玥婚礼请柬</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+<!-- 微信分享卡片核心 -->
+<meta property="og:title" content="周少辰 ❤ 吴玥婚礼请柬">
+<meta property="og:description" content="嘉礼将成，良期已定。5月30日，太原兰博泰尔酒店，静候君至。">
+<meta property="og:image" content="https://你的域名/cover.jpg">
+<meta property="og:type" content="website">
+
+<!-- 微信专用 -->
+<meta name="twitter:card" content="summary_large_image">
 
 <style>
 body{
     margin:0;
-    font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    background:#f7f4ef;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto;
+    background:#fff;
     color:#333;
+    text-align:center;
+}
+.cover img{
+    width:100%;
 }
 .container{
-    max-width:720px;
-    margin:0 auto;
-    padding:20px;
-}
-.card{
-    background:white;
-    border-radius:18px;
-    box-shadow:0 8px 30px rgba(0,0,0,0.08);
     padding:24px;
 }
-.hero img{
-    width:100%;
-    border-radius:16px;
-}
 h1{
-    text-align:center;
-    font-weight:500;
-    margin:24px 0 8px;
+    font-size:26px;
+    margin:16px 0;
 }
-.names,.time,.venue{
-    text-align:center;
-    margin:6px 0;
+.info{
+    line-height:1.8;
     font-size:16px;
-}
-.message{
-    margin:24px 0;
-    line-height:1.9;
     white-space:pre-line;
-    text-align:center;
 }
-.map-title{
-    text-align:center;
-    margin:24px 0 12px;
-    font-size:18px;
-}
-.map iframe{
+.map img{
     width:100%;
-    height:280px;
-    border:0;
     border-radius:12px;
+    margin-top:20px;
 }
-.footer{
-    text-align:center;
-    margin-top:18px;
-    font-size:14px;
-    color:#888;
+.btn{
+    display:inline-block;
+    margin-top:12px;
+    padding:12px 20px;
+    background:#000;
+    color:#fff;
+    text-decoration:none;
+    border-radius:8px;
 }
 </style>
 </head>
 
 <body>
+
+<div class="cover">
+    <img src="cover.jpg" alt="cover">
+</div>
+
 <div class="container">
-  <div class="card">
+    <h1>周少辰 ❤ 吴玥</h1>
 
-    <div class="hero">
-      <img src="20260415-211014.jpg" alt="Wedding Photo" />
-    </div>
+    <div class="info">
+时间：2026年5月30日 12:00
+地点：太原兰博泰尔酒店
 
-    <h1>周少辰 ❤ 吴玥婚礼请柬</h1>
-    <div class="names">周少辰，吴玥</div>
-    <div class="time">2026年5月30日 12:00</div>
-    <div class="venue">太原兰博泰尔酒店</div>
-
-    <div class="message">
 嘉礼将成，良期已定。
 两姓既合，百年有约。
 不言山盟，天地自证；
@@ -100,18 +83,16 @@ h1{
 静候君至。
     </div>
 
-    <div class="map-title">婚礼地点</div>
     <div class="map">
-      <iframe
-        src="https://apis.map.qq.com/uri/v1/marker?marker=coord:37.87812,112.5635;title:兰博泰尔酒店;addr:山西省太原市杏花岭区府西街103号&referer=myapp">
-      </iframe>
+        <!-- 腾讯地图静态图（不会404） -->
+        <img src="https://apis.map.qq.com/ws/staticmap/v2/?center=兰博泰尔酒店,太原&zoom=16&size=600*300&markers=size:large|color:red|兰博泰尔酒店,太原&key=你的腾讯地图key">
+        <br/>
+        <a class="btn" href="https://apis.map.qq.com/uri/v1/marker?marker=coord:37.8706,112.5489;title:兰博泰尔酒店;addr:山西省太原市杏花岭区府西街103号&referer=myapp" target="_blank">
+            一键导航到酒店
+        </a>
     </div>
 
-    <div class="footer">
-      敬备喜筵 恭候光临
-    </div>
-
-  </div>
 </div>
+
 </body>
 </html>
