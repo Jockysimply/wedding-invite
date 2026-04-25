@@ -15,24 +15,11 @@
   <title>周少辰 ❤ 吴玥婚礼请柬</title>
 
   <style>
-    :root {
-      --bg: #f7f4ef;
-      --card: #ffffff;
-      --text: #333;
-      --sub: #666;
-      --muted: #999;
-      --line: #f0ece5;
-      --main: #b88a5a;
-      --main-dark: #a1764d;
-    }
-
-    * { box-sizing: border-box; }
-
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      background: #f7f4ef;
+      color: #333;
     }
 
     .container {
@@ -42,7 +29,7 @@
     }
 
     .card {
-      background: var(--card);
+      background: #fff;
       border-radius: 18px;
       box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
       padding: 24px;
@@ -58,26 +45,24 @@
       text-align: center;
       font-weight: 500;
       margin: 20px 0 8px;
-      letter-spacing: .3px;
     }
 
     .info {
       text-align: center;
       line-height: 1.8;
       font-size: 15px;
-      color: var(--sub);
+      color: #555;
     }
 
     .message {
       margin-top: 20px;
-      line-height: 1.9;
+      line-height: 1.8;
       font-size: 15px;
       white-space: pre-line;
       text-align: center;
       color: #444;
     }
 
-    /* 仿微信位置卡片 */
     .map-title {
       margin-top: 24px;
       margin-bottom: 12px;
@@ -88,34 +73,27 @@
     }
 
     .location-card {
-      border: 1px solid var(--line);
+      border: 1px solid #f0ece5;
       border-radius: 14px;
-      overflow: hidden;
       background: #fffdfa;
+      padding: 14px;
     }
 
-    .location-cover img {
-      width: 100%;
-      display: block;
-      height: auto;
-    }
-
-    .location-body {
-      padding: 12px 14px 14px;
+    .location-info {
+      text-align: center;
     }
 
     .location-name {
-      margin: 0;
-      font-size: 16px;
+      font-size: 17px;
       color: #2f2f2f;
       font-weight: 600;
       line-height: 1.4;
     }
 
     .location-addr {
-      margin: 6px 0 0;
+      margin-top: 6px;
       font-size: 13px;
-      color: var(--muted);
+      color: #888;
       line-height: 1.6;
     }
 
@@ -134,30 +112,16 @@
       height: 40px;
       line-height: 40px;
       font-size: 14px;
-      border: 0;
-      user-select: none;
+      color: #fff;
       -webkit-tap-highlight-color: transparent;
     }
 
-    .btn-main {
-      background: var(--main);
-      color: #fff;
+    .btn-tx {
+      background: #12b7f5;
     }
 
-    .btn-main:active {
-      background: var(--main-dark);
-    }
-
-    .btn-ghost {
-      background: #f6f1ea;
-      color: #7b5a39;
-    }
-
-    .tip {
-      margin-top: 8px;
-      text-align: center;
-      font-size: 12px;
-      color: #9e8c79;
+    .btn-gd {
+      background: #00b578;
     }
 
     .footer {
@@ -168,12 +132,17 @@
     }
 
     @media (max-width: 520px) {
-      .card { padding: 18px; }
-      .actions { flex-direction: column; }
-      .btn { flex: none; }
+      .card {
+        padding: 18px;
+      }
+
+      .actions {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
+
 <body>
   <div class="container">
     <div class="card">
@@ -208,41 +177,30 @@
 静候君至。
       </div>
 
-      <!-- 仿微信地图卡片（稳定方案：静态图 + 一键导航） -->
+      <!-- 婚礼地点 -->
       <div class="map-title">婚礼地点</div>
       <div class="location-card">
-        <div class="location-cover">
-          <!-- 这张图你可以换成自己截图后的 map.jpg（更稳） -->
-          <img
-            src="https://apis.map.qq.com/ws/staticmap/v2/?center=37.87812,112.5635&zoom=16&size=700*360&markers=size:large|color:red|37.87812,112.5635"
-            alt="婚礼地点地图预览"
-          />
+        <div class="location-info">
+          <div class="location-name">太原兰博泰尔酒店</div>
+          <div class="location-addr">山西省太原市杏花岭区府西街103号</div>
         </div>
 
-        <div class="location-body">
-          <p class="location-name">太原兰博泰尔酒店</p>
-          <p class="location-addr">山西省太原市杏花岭区府西街103号</p>
+        <div class="actions">
+          <a
+            class="btn btn-tx"
+            href="https://apis.map.qq.com/uri/v1/marker?marker=coord:37.87812,112.5635;title:%E5%85%B0%E5%8D%9A%E6%B3%B0%E5%B0%94%E9%85%92%E5%BA%97;addr:%E5%B1%B1%E8%A5%BF%E7%9C%81%E5%A4%AA%E5%8E%9F%E5%B8%82%E6%9D%8F%E8%8A%B1%E5%B2%AD%E5%8C%BA%E5%BA%9C%E8%A5%BF%E8%A1%97103%E5%8F%B7&referer=myapp"
+            target="_blank"
+            rel="noopener"
+          >腾讯地图导航</a>
 
-          <div class="actions">
-            <!-- 主按钮：打开腾讯地图位置/导航 -->
-            <a
-              class="btn btn-main"
-              href="https://apis.map.qq.com/uri/v1/marker?marker=coord:37.87812,112.5635;title:%E5%85%B0%E5%8D%9A%E6%B3%B0%E5%B0%94%E9%85%92%E5%BA%97;addr:%E5%B1%B1%E8%A5%BF%E7%9C%81%E5%A4%AA%E5%8E%9F%E5%B8%82%E6%9D%8F%E8%8A%B1%E5%B2%AD%E5%8C%BA%E5%BA%9C%E8%A5%BF%E8%A1%97103%E5%8F%B7&referer=myapp"
-              target="_blank"
-              rel="noopener"
-            >一键打开导航</a>
-
-            <!-- 备用按钮：显示经纬度，可复制到任意地图 -->
-            <a
-              class="btn btn-ghost"
-              href="https://uri.amap.com/marker?position=112.5635,37.87812&name=%E5%85%B0%E5%8D%9A%E6%B3%B0%E5%B0%94%E9%85%92%E5%BA%97"
-              target="_blank"
-              rel="noopener"
-            >备用地图入口</a>
-          </div>
+          <a
+            class="btn btn-gd"
+            href="https://uri.amap.com/marker?position=112.5635,37.87812&name=%E5%85%B0%E5%8D%9A%E6%B3%B0%E5%B0%94%E9%85%92%E5%BA%97&src=mypage&coordinate=gaode"
+            target="_blank"
+            rel="noopener"
+          >高德地图导航</a>
         </div>
       </div>
-      <div class="tip">若地图预览偶发不显示，可将预览图替换为你本地截图 map.jpg</div>
 
       <div class="footer">
         敬备喜筵 恭候光临
