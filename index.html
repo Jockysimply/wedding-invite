@@ -76,10 +76,22 @@
       border: 1px solid #f0ece5;
       border-radius: 14px;
       background: #fffdfa;
-      padding: 14px;
+      overflow: hidden;
+    }
+
+    .map-preview-link {
+      display: block;
+      text-decoration: none;
+    }
+
+    .map-preview {
+      width: 100%;
+      display: block;
+      background: #f2f2f2;
     }
 
     .location-info {
+      padding: 12px 14px 6px;
       text-align: center;
     }
 
@@ -98,7 +110,8 @@
     }
 
     .actions {
-      margin-top: 12px;
+      margin-top: 10px;
+      padding: 0 14px 14px;
       display: flex;
       gap: 10px;
     }
@@ -116,13 +129,8 @@
       -webkit-tap-highlight-color: transparent;
     }
 
-    .btn-tx {
-      background: #12b7f5;
-    }
-
-    .btn-gd {
-      background: #00b578;
-    }
+    .btn-tx { background: #12b7f5; }
+    .btn-gd { background: #00b578; }
 
     .footer {
       text-align: center;
@@ -132,13 +140,8 @@
     }
 
     @media (max-width: 520px) {
-      .card {
-        padding: 18px;
-      }
-
-      .actions {
-        flex-direction: column;
-      }
+      .card { padding: 18px; }
+      .actions { flex-direction: column; }
     }
   </style>
 </head>
@@ -177,9 +180,23 @@
 静候君至。
       </div>
 
-      <!-- 婚礼地点 -->
+      <!-- 婚礼地点：默认腾讯地图预览 + 腾讯/高德导航 -->
       <div class="map-title">婚礼地点</div>
       <div class="location-card">
+        <a
+          class="map-preview-link"
+          href="https://apis.map.qq.com/uri/v1/marker?marker=coord:37.87812,112.5635;title:%E5%85%B0%E5%8D%9A%E6%B3%B0%E5%B0%94%E9%85%92%E5%BA%97;addr:%E5%B1%B1%E8%A5%BF%E7%9C%81%E5%A4%AA%E5%8E%9F%E5%B8%82%E6%9D%8F%E8%8A%B1%E5%B2%AD%E5%8C%BA%E5%BA%9C%E8%A5%BF%E8%A1%97103%E5%8F%B7&referer=myapp"
+          target="_blank"
+          rel="noopener"
+          aria-label="打开腾讯地图"
+        >
+          <img
+            class="map-preview"
+            src="https://apis.map.qq.com/ws/staticmap/v2/?center=37.87812,112.5635&zoom=16&size=720*360&scale=2&markers=size:large|color:red|37.87812,112.5635"
+            alt="太原兰博泰尔酒店地图预览"
+          />
+        </a>
+
         <div class="location-info">
           <div class="location-name">太原兰博泰尔酒店</div>
           <div class="location-addr">山西省太原市杏花岭区府西街103号</div>
@@ -195,10 +212,10 @@
 
           <a
             class="btn btn-gd"
-            href="https://uri.amap.com/marker?position=112.5635,37.87812&name=%E5%85%B0%E5%8D%9A%E6%B3%B0%E5%B0%94%E9%85%92%E5%BA%97&src=mypage&coordinate=gaode"
+            href="https://uri.amap.com/marker?position=112.5635,37.87812&name=%E5%85%B0%E5%8D%9A%E6%B3%B0%E5%B0%94%E9%85%92%E5%BA%97&src=weddinginvite&coordinate=gaode"
             target="_blank"
             rel="noopener"
-          >高德地图导航</a>
+          >Alternative: 高德导航</a>
         </div>
       </div>
 
